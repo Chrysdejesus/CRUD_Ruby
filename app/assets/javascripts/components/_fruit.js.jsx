@@ -21,8 +21,8 @@ class Fruit extends React.Component{
   }
 
   render(){
-    let name = this.state.editable ? <input type='text' ref={input => this.name = input} defaultValue={this.props.fruit.name}/>:<h3>{this.props.fruit.name}</h3>
-    let description = this.state.editable ? <input type='text' ref={input => this.description = input} defaultValue={this.props.fruit.description}/>:<p>{this.props.fruit.description}</p>
+    let name = this.state.editable ? <input type='text' style={styles} ref={input => this.name = input} defaultValue={this.props.fruit.name}/>:<h3>{this.props.fruit.name}</h3>
+    let description = this.state.editable ? <input type='text' style={styles} ref={input => this.description = input} defaultValue={this.props.fruit.description}/>:<p>{this.props.fruit.description}</p>
     return(
       <div>
         {name}
@@ -32,4 +32,8 @@ class Fruit extends React.Component{
       </div>
     )      
   }
+}
+
+const styles = {
+  display: 'block'
 }
